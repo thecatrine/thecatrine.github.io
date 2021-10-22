@@ -46,8 +46,6 @@ Writing code for Solana felt like writing code for a microcontroller, everything
 
 ## Program Structure
 
-RSI Set up license on the source code.
-
 You can view the source code for the final contract [Here](https://github.com/thecatrine/Nift)
 
 And the [frontend](https://github.com/thecatrine/Glitch-Punks-Client)
