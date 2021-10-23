@@ -9,7 +9,7 @@ I recently spent a weekend getting up to speed on the Solana ecosystem by launch
 
 [Solana](https://solana.com/) is a blockchain that promises low fees, fast transaction times, and uses Rust for their on-chain programs. A lot of new projects, especially NFTs, are being built on Solana because you can make small transactions without your whole balance being eaten by fees.
 
-I've worked with several smart contract systems, and Solana is very nice and low friction in several ways, but there are some unique design decisions that I found difficult to understand without a top-level overview of how all the parts interact.
+I've worked with several smart contract systems(1), and Solana is very nice and low friction in several ways, but there are some unique design decisions that I found difficult to understand without a top-level overview of how all the parts interact.
 
 This article is an attempt to write the motivational overview I with I'd had when I started this project, and share links that were helpful to me. I'll give a high level overview of the Solana architecture, and explain the reasons behind common Solana program structure, with concrete examples of working code from my NFT.
 
