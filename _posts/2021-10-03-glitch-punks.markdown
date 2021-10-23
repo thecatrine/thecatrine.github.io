@@ -13,21 +13,19 @@ I've worked with several smart contract systems(1), and Solana is very nice and 
 
 This article is an attempt to write the motivational overview I with I'd had when I started this project, and share links that were helpful to me. I'll give a high level overview of the Solana architecture, and explain the reasons behind common Solana program structure, with concrete examples of working code from my NFT.
 
-## The Idea
-
-I was excited about the low fees to deploy on Solana, and being able to use Rust for development. I mentioned I was trying to come up with an idea, and got to talking in discord about possibly making an NFT. My friend Josh pitched me a broken, glitched parody of Crypto Punks.
+## Glitch Punks
 
 > Oh I was thinking completely broken punks. Like tragically misshapen and mutated punks. \
 > People who life has trampled punks. \
 > Josh
 
-I was sold. I spent the rest of the weekend learning how to build the contract, deploy all the assets, and hook everything up.
+You can check out the completed app here --> [Glitch Punks](https://glitchpunks.art)
 
-(You can check out the completed app here --> [Glitch Punks](https://glitchpunks.art))
+Code for the final contract [Here](https://github.com/thecatrine/GlitchPunks)
 
-I wanted to learn the framework, so I wrote everything from scratch. There are projects which will let you mint an NFT directly if you just want to have one in-hand as fast as possible, but I wanted to get into the nitty-gritty of building the contract itself.
+And the [frontend](https://github.com/thecatrine/Glitch-Punks-Client)
 
-There were some parts of contract development with Solana that surprised me, or were confusing without explanation, and this is an attempt to put all the explanations that helped me into one place. Hopefully after reading this post and reading the source code, you'll come away with a clear picture of what is required to build a contract on Solana.
+Quick Warning: I wanted to learn the framework, so I wrote everything from scratch. There are projects which will let you mint an NFT directly if you just want to have one in-hand as fast as possible, but I wanted to get into the nitty-gritty of building the contract itself.
 
 ## Quick Architecture Comparison
 
@@ -48,10 +46,6 @@ Solana's architecture has some significant differences in how the programs are w
 Writing code for Solana felt like writing code for a microcontroller, everything has a very well defined interface that seems un-opinionated about how you use it, but it's rigid in what capabilities it has and the ergonomics aren't great. My final working contract is substantively longer than an equivalent one written in Solidity.
 
 ## Program Structure
-
-You can view the source code for the final contract [Here](https://github.com/thecatrine/Nift)
-
-And the [frontend](https://github.com/thecatrine/Glitch-Punks-Client)
 
 A program in solana has an entrypoint that is called by the runtime when the program is executed, and passes in an opaque binary blob containing accounts and arguments. There's very little magic here, so a fair amount of the source code is dedicated to managing encoding and decoding data.
 
